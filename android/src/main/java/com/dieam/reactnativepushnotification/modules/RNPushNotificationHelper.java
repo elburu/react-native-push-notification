@@ -273,8 +273,10 @@ public class RNPushNotificationHelper {
             if(channel_id == null) {
                 channel_id = this.config.getNotificationDefaultChannelId();
             }
+            PendingIntent fullScreenIntent = toScheduleNotificationIntent(bundle);  
             
             NotificationCompat.Builder notification = new NotificationCompat.Builder(context, channel_id)
+                    .setFullScreenIntent(fullScreenIntent, true);
                     .setContentTitle(title)
                     .setTicker(bundle.getString("ticker"))
                     .setVisibility(visibility)
