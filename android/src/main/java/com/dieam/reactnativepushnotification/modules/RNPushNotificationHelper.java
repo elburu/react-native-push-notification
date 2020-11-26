@@ -276,7 +276,7 @@ public class RNPushNotificationHelper {
             PendingIntent fullScreenIntent = toScheduleNotificationIntent(bundle);  
             
             NotificationCompat.Builder notification = new NotificationCompat.Builder(context, channel_id)
-                    .setFullScreenIntent(fullScreenIntent, true);
+                    .setFullScreenIntent(fullScreenIntent, true)
                     .setContentTitle(title)
                     .setTicker(bundle.getString("ticker"))
                     .setVisibility(visibility)
